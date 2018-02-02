@@ -3,19 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="copyright" content="URBank" />
+    <meta name="author" lang="en" content="Dan Orlovsky" />
+    <meta name="description"
+          content="URBank, the only bank where U R #1." />
+    <meta name="keyword" content="Banking, online banking, best banks" />  
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <title>Document</title>
+    <link href="assets/css/site.css" rel="stylesheet" />
+    <link href="assets/img/favicon.ico" rel="icon" />  
+            
+    <title>URBank - Home</title>
 </head>
 <body>
-    
+    <div class="body-content">
+        <header>
+            <nav class="nav" id="main-nav">
+                <div class="nav-left">
 
+                </div>
+                <div class="nav-right">
+
+                </div>
+            </nav>
+        </header>
+        <div class="left-column">
+                <h2>Here is some content!</h2>
+            </div>
+            <div class="right-column">
+        
+            </div>
+        </div>
     <script>
 
         $(document).ready(function() {
             $.ajax({
-                url: '/code-test.json',
+                url: 'code-test.json',
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {

@@ -1,0 +1,31 @@
+/* 
+site.css
+Daniel Orlovsky
+*/
+
+/* Reset some default browser styles */
+html, body, div, header, footer, h1, h2, h3, h4, h5, h6,
+nav {
+    padding: 0; margin: 0;
+    font-size: 100%; vertical-align: baseline;
+}
+/* END DEFAULT STYLES RESET */
+
+.body-content {
+    padding: 0 15%;
+}
+
+
+/* RESPONSIVE STYLES */
+@media only screen and (max-width: 1200px) {
+    .body-content { padding: 0 5%; }
+}
+
+@media only screen and (max-width: 767px) {
+    .body-content { padding: 0; }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+    .body-content { padding: 0; }
+}
