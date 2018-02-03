@@ -5,27 +5,356 @@ Daniel Orlovsky
 
 /* Reset some default browser styles */
 html, body, div, header, footer, h1, h2, h3, h4, h5, h6,
-nav {
+ul, li, ol, nav, p {
     padding: 0; margin: 0;
-    font-size: 100%; vertical-align: baseline;
+    vertical-align: baseline;
+}
+
+/* SET DISPLAY FOR OLDER BROWSERS */
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+}
+body {
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 /* END DEFAULT STYLES RESET */
 
-.body-content {
+/**********************************************************
+**** BASE CONTENT STYLES **********************************
+***********************************************************/
+
+.body-content {padding: 25px 15% 0; color: #666; }
+footer { padding: 25px 15%; background-color: #e7e8ea; }
+footer:after {
+    clear: both;
+    content: '.';
+    display: block;
+}
+header {
+    overflow: auto;
+    background-color: #318fc2;
     padding: 0 15%;
+    box-sizing: border-box; 
 }
 
+p, li { font-size:1.25em; color: #666; line-height: 1.4em; }
+p { margin: 20px 0;}
+li { list-style-position: inside;}
 
-/* RESPONSIVE STYLES */
+a, .tabrow li { color: #4682b4;}
+a:hover { color: #2a4e6c; }
+h1, h2 { font-weight: 100; }
+h3, h4, h5, h6 { font-weight: 700; }
+h1 { font-size: 3em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 2em; }
+h4 { font-size: 1.55em; }
+h5 { font-size: 1.35em; }
+h6 { font-size: 1.25em; }
+
+
+section { padding: 20px 0; }
+
+
+/**********************************************************
+**** NAVBAR STYLES ****************************************
+***********************************************************/
+.nav ul { list-style-type: none; }
+.nav-left { float: left; }
+.nav-right { float: right; }
+header .nav-right li {
+    line-height: 78px;
+}
+.nav-right li {
+    display: inline-block;
+    padding: 0 30px;
+    font-size: 1.2em;
+}
+.nav-left a { text-decoration: none; }
+header .nav-right li:hover { background-color:#2a4e6c;}
+.nav-right a { text-decoration: none;}
+header .nav-right a {
+    color: white;
+}
+.logo { 
+    width: 300px;
+    height: 74px;    
+    background-image: url('../img/urbank@2x.png');
+}
+/**********************************************************
+**** BODY STYLES ******************************************
+***********************************************************/
+article > h1, article > h5 {
+    color: #640360; 
+}
+.left-column, .right-column{ padding: 30px 0;}
+.left-column {
+    float: left;
+    width: 66%;
+
+}
+.right-column {
+    float: right;
+    width: 29%;
+}
+.login-button {
+    width: 100%;
+    text-align: center;
+    background-color: #640360;
+    border: none;
+    padding: 20px;
+    color: white;
+    font-size: 1.2em;
+}
+
+.soft-hero {
+    background-color: #bbd8c4;
+    padding: 10px 25px;
+    margin-top: 50px;
+}
+.hero-info > p{
+    width: 66%;
+}
+
+.hero-info > img {
+    float: right;
+    margin-top: -365px;
+    
+}
+input[type=text], input[type=password] {
+    border: 1px solid #318fc2;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.headline > h2 {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.headline > h2:first-child {
+    border-right: 1px solid #666; padding-left: 0;
+}
+.body-content:after {
+    clear: both;
+    content: '.';
+    display: block;
+}
+/**********************************************************
+**** LOGIN FORM STYLES ************************************
+***********************************************************/
+#login-form {
+    display: none;
+    opacity: 0;
+}
+.login-form {
+    width: 33%;
+    padding: 25px;  
+    margin: 10% auto auto auto;
+    background-color: #fff;
+    box-shadow: 0 0 5px #000;
+}
+.login-form-background { 
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw; height: 100%;
+    background-color: rgba(0,0,0,.5);   
+}
+.login-form-header > h2 {
+    display: inline-block;
+}
+.login-form-body {
+    padding-top: 25px;
+}
+.form-row > label {
+    font-weight: 800;
+    font-size: 1.4em;
+    width: 25%;
+}
+
+.form-row > input {
+    float: right;
+    width: 75%;
+}
+.form-row:after {
+    clear: both;
+    content: '.';
+    display: block;
+}
+#close-form {
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: url('../img/times@2x.png') no-repeat;
+}
+.login-button-wrapper {
+    width: 200px;
+    height: 50px;
+    float: right;
+}
+
+/**********************************************************
+**** RATE TABLE STYLES ************************************
+***********************************************************/
+table.table {
+    border-collapse: collapse;
+    margin-top: 20px;   
+    width: 100%;
+    text-align: right;
+}
+td, th { padding: 15px 7px; }
+tbody td {
+    font-size: 1.5em;
+}
+td:first-child {
+    text-align: left;
+    padding-left: 10px;
+}
+tbody > tr:first-child {
+    font-weight: 800;
+    font-size: 1.5em;
+}
+tbody > tr:nth-child(odd) {
+    background-color: #eef5ee;
+}
+tbody > tr:nth-child(even) {
+    background-color: #deebe1;
+}
+
+/**********************************************************
+**** TAB STYLES *******************************************
+***********************************************************/
+.tabrow {
+  text-align: left;
+  list-style: none;
+}
+.tabrow li {
+    position: relative;
+    z-index: 0;
+    padding: 10px;
+    width: 30%;
+    margin: 0 -5px;
+    border-top: 1px solid #aaa;
+    font-size: 1.4em;
+    background: #deebe1;
+    display: inline-block;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+.tabrow li:first-child {
+    margin: 0;
+}
+.tabrow li.active {
+    background: #f5f5f5;
+    color: #000;
+    z-index: 2;
+    padding: 20px;
+    top: 2px;
+}
+.tabrow:before {
+    z-index: 1;
+}
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: 1px solid #ccc;   
+    background-color: #f5f5f5
+}
+.tabcontent a { text-decoration: none;}
+.tabcontent.active { display: block;}
+/**********************************************************
+**** RESPONSIVE STYLES ************************************
+***********************************************************/
 @media only screen and (max-width: 1200px) {
-    .body-content { padding: 0 5%; }
+    .body-content, header { padding: 0 5%; }
+    .logo { 
+        width: 150px;
+        height: 38px;    
+        background-image: url('../img/urbank.png');
+    }
+    header .nav-right li {
+        line-height: 38px;
+    }
+    
+    .left-column {
+        width: 66%;
+    }
+    .right-column {
+        width:33%;
+    }
 }
 
-@media only screen and (max-width: 767px) {
-    .body-content { padding: 0; }
+@media only screen and (max-width: 1024px) {
+    .body-content, header { padding: 0; }
+    .left-column {
+        float:none;
+        display: block;
+        margin: 0 auto;
+        width: 95%;
+        padding: 0;
+    }
+    .right-column {
+        float:none;
+        display: block;
+        margin: 0 auto;
+        width: 95%;
+        padding: 0;
+    }
 }
-
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-    /* portrait phones */
-    .body-content { padding: 0; }
+@media only screen and (max-width: 768px) {
+    .nav-right li {
+        padding: 0 15px;
+    }
+    
+}
+@media only screen and (max-width: 420px) {
+    .hero-info > p{
+        width: 100%;
+    }
+    #rate-table {
+        overflow: auto;
+    }
+    .hero-info > img {
+        display: none;        
+    }
+    #close-form {
+        width: 16px;
+        height: 16px;
+        padding-right: 5px;  /* Push the close button off the margin */
+        background: url('../img/times.png') no-repeat;
+    }
+    .login-form {
+        width: 99%;
+        padding: 5px;  
+        margin: 15% auto auto auto;
+    }
+    .login-form-header > h2 {
+        font-size: 2em;
+    }
+    .nav-right li {
+        display: block;
+        padding: 10px;
+        
+    }
+    .logo {
+        display: block;
+        margin: 0 auto;
+    }
+    .nav-left, .nav-right {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    header .nav-right li {
+        line-height: 16px;
+        border-bottom: 1px solid #e7e8ea;
+    }
+    .headline > h2 {
+        display: inline-block;
+        padding: 0 20px;
+        font-size: 1.8em;
+    }
+       
 }

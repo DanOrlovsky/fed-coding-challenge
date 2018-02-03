@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,50 +8,195 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta name="copyright" content="URBank" />
     <meta name="author" lang="en" content="Dan Orlovsky" />
-    <meta name="description"
-          content="URBank, the only bank where U R #1." />
-    <meta name="keyword" content="Banking, online banking, best banks" />  
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
+    <meta name="description" content="URBank, the only bank where U R #1." />
+    <meta name="keyword" content="Banking, online banking, best banks" />
+    <!-- GENERATE HTML5 TAGS FOR OLDER BROWSERS -->
+    <!--[if lt IE 9]>
+        <script>
+            document.createElement('article');
+            document.createElement('header');
+            document.createElement('footer');
+            document.createElement('section');
+            document.createElement('aside');
+            document.createElement('nav');
+        </script>
+    <![endif]-->
+
     <link href="assets/css/site.css" rel="stylesheet" />
-    <link href="assets/img/favicon.ico" rel="icon" />  
-            
+    <link href="assets/img/favicon.ico" rel="icon" />
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
     <title>URBank - Home</title>
 </head>
+
 <body>
-    <div class="body-content">
-        <header>
-            <nav class="nav" id="main-nav">
-                <div class="nav-left">
-
-                </div>
-                <div class="nav-right">
-
-                </div>
-            </nav>
-        </header>
-        <div class="left-column">
-                <h2>Here is some content!</h2>
+    <!-- HEADER -->
+    <header>
+        <nav class="nav" id="main-nav">
+            <div class="nav-left">
+                <a class="logo-display" href="#">
+                    <div class="logo"></div>
+                </a>
             </div>
-            <div class="right-column">
-        
+            <div class="nav-right">
+                <ul class="nav-items">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">employee</a></li>
+                    <li><a href="#">company</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- END HEADER -->
+    <!-- BODY -->
+    <div class="body-content">
+        <div class="left-column">
+            <section id="call-to-action">
+                <article>
+                    <h1>Best Bank Ever!</h1>
+                    <p>
+                        Pellentesque habitant morbi tristique senectus et netus et <a href="#">malesuada</a> fames ac turpis egestas. Vestibulum tortor quam, feugiat
+                        vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
+                        mi vitae est. Mauris <a href="#">placerat</a> eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
+                    </p>
+                    <h4>Reasons We're Awesome:</h4>
+                    <p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Aliquam tincidunt mauris eu risus.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Vestibulum auctor dapibus neque.</li>
+                        </ul>
+                    </p>
+                </article>
+                <article class="soft-hero">
+                    <h5>Amazing Mobile Info</h5 >
+                    <div class="hero-info">
+                        <p>
+                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, 
+                            feugiatvitae, ultricies eget, tempor sit amet, ante.
+                        </p>
+                        <img src="assets/img/iphone@2x.png" alt="UR Bank on your mobile device" />
+                    </div>
+                </article>
+            </section>
+            <section id="rates">
+                <div class="headline">
+                    <h2>Rates</h2>
+                    <h2><strong>Check them out.</strong></h2>
+                </div>
+                <div id="rate-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Annual Percentage Yield</th>
+                                <th>Est. Earnings for 1 Year*</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rate-table-body">
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><small>*Based on $50,000 deposit.</small></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <aside class="right-column">
+            <section id="login-section">
+                <button class="login-button">Login</button>
+            </section>
+            <section id="news-section">
+                <ul class="tabrow">
+                    <li class="tablinks active" data-tabid="news">News</li>
+                    <li class="tablinks" data-tabid="archive">Archive</li>
+                </ul>   
+                <!-- Tab content -->
+                <div id="news" class="tabcontent active">
+                    <h4><a href="#">Lorem ipsum dolor</a></h4>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis</p>
+                    <h4><a href="#">Lorem ipsum dolor</a></h4>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis</p>
+                    <h4><a href="#">Lorem ipsum dolor</a></h4>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis</p>
+                </div>
+                          
+                <div id="archive" class="tabcontent">
+                    <h4><a href="#">Pellentesque habitant</a></h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo numquam natus facilis! 
+                        Nisi eveniet dicta dolor architecto ducimus placeat officiis velit. Tenetur, mollitia vero. 
+                        Illum dolor dolorem aliquid assumenda tempore.
+                    </p>
+                </div>            
+            </section>
+        </aside>
+    </div>
+
+
+    <!-- FOOTER --> 
+    <footer>
+        <div class="nav" id="footer-nav">
+            <div class="nav-left">
+                <a href="#">
+                    <h6>&copy;2018 UR Bank</h6>
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-items">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">employee</a></li>
+                    <li><a href="#">company</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+        </div>       
+    </footer>
+
+<!--  -->
+<!--- MODAL FORM -->
+<!-- SEE COUPLED JAVASCRIPT FOR DISPLAY CODE --> 
+    <section id="login-form">
+        <div class="login-form-background">
+            <div class="login-form">
+                <div class="login-form-header">
+                    <h2>Sign In To Your Account</h2>
+                    <div id="close-form"></div>
+                </div>
+                <div class="login-form-body">
+                    <form action="/login" method="POST">
+                        <div class="form-row">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" />
+                        </div>
+                        <div class="form-row">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" />
+                        </div>
+                        <div class="form-row">
+                            <div class="login-button-wrapper">
+                                <button id="submit-login" class="login-button">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    <script>
-
-        $(document).ready(function() {
-            $.ajax({
-                url: 'code-test.json',
-                method: 'GET',
-                dataType: 'json',
-                success: function(data) {
-                    console.log(data);
-                },
-                error: function() {
-                    console.log("We have an error");
-                }
-            })
-        })
-    </script>
+    </section>
+    
+    <!-- GRAB CORRESPONDING JAVASCRIPT FILE -->
+    <script src="assets/js/index.js"></script>
 </body>
+
 </html>
