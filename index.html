@@ -33,7 +33,7 @@
 <body>
     <!-- HEADER -->
     <header>
-        <nav class="nav" id="main-nav">
+        <nav class="nav" id="main-nav" role="navigation">
             <div class="nav-left">
                 <a class="logo-display" href="#">
                     <div class="logo"></div>
@@ -53,7 +53,7 @@
     <!-- END HEADER -->
     <!-- BODY -->
     <div class="body-content">
-        <div class="left-column">
+        <div class="left-column" role="main">
             <section id="call-to-action">
                 <article>
                     <h1>Best Bank Ever!</h1>
@@ -80,7 +80,8 @@
                             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, 
                             feugiatvitae, ultricies eget, tempor sit amet, ante.
                         </p>
-                        <img src="assets/img/iphone@2x.png" alt="UR Bank on your mobile device" />
+                        <!-- img src="assets/img/iphone@2x.png" alt="UR Bank on your mobile device" /-->
+                        <div class="phone-display"></div>
                     </div>
                 </article>
             </section>
@@ -114,7 +115,8 @@
 
         <aside class="right-column">
             <section id="login-section">
-                <button class="login-button">Login</button>
+                <!-- MADE btn-login-form A CLASS SO OTHER ELEMENTS CAN USE THE FEATURE -->
+                <button class="login-button btn-login-form">Login</button>
             </section>
             <section id="news-section">
                 <ul class="tabrow">
@@ -138,6 +140,12 @@
                         Nisi eveniet dicta dolor architecto ducimus placeat officiis velit. Tenetur, mollitia vero. 
                         Illum dolor dolorem aliquid assumenda tempore.
                     </p>
+                    <h4><a href="#">Pellentesque habitant</a></h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo numquam natus facilis! 
+                        Nisi eveniet dicta dolor architecto ducimus placeat officiis velit. Tenetur, mollitia vero. 
+                        Illum dolor dolorem aliquid assumenda tempore.
+                    </p>
                 </div>            
             </section>
         </aside>
@@ -149,7 +157,7 @@
         <div class="nav" id="footer-nav">
             <div class="nav-left">
                 <a href="#">
-                    <h6>&copy;2018 UR Bank</h6>
+                    <h6 role="contentinfo">&copy;2018 URBank</h6>
                 </a>
             </div>
             <div class="nav-right">
@@ -172,10 +180,10 @@
             <div class="login-form">
                 <div class="login-form-header">
                     <h2>Sign In To Your Account</h2>
-                    <div id="close-form"></div>
+                    <div class="close-login-form"></div>
                 </div>
                 <div class="login-form-body">
-                    <form action="/login" method="POST">
+                    <form action="/login" method="POST" role="form">
                         <div class="form-row">
                             <label for="username">Username</label>
                             <input type="text" id="username" />
@@ -186,7 +194,7 @@
                         </div>
                         <div class="form-row">
                             <div class="login-button-wrapper">
-                                <button id="submit-login" class="login-button">Login</button>
+                                <button id="btn-submit-login" class="login-button">Login</button>
                             </div>
                         </div>
                     </form>

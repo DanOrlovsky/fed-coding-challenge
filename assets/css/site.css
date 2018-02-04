@@ -113,14 +113,17 @@ article > h1, article > h5 {
     padding: 10px 25px;
     margin-top: 50px;
 }
-.hero-info > p{
-    width: 66%;
+.hero-info p{
+    width: 75%;
 }
 
-.hero-info > img {
+.phone-display {
     float: right;
     margin-top: -365px;
-    
+    background-image: url('../img/iphone@2x.png');
+    background-repeat: no-repeat;
+    width: 206px;
+    height: 355px;
 }
 input[type=text], input[type=password] {
     border: 1px solid #318fc2;
@@ -147,20 +150,20 @@ input[type=text], input[type=password] {
 #login-form {
     display: none;
     opacity: 0;
+    padding: 0;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,.5);   
 }
 .login-form {
     width: 33%;
-    padding: 25px;  
+    padding: 25px;
     margin: 10% auto auto auto;
     background-color: #fff;
     box-shadow: 0 0 5px #000;
 }
-.login-form-background { 
-    position: absolute;
-    top: 0; left: 0;
-    width: 100vw; height: 100%;
-    background-color: rgba(0,0,0,.5);   
-}
+
 .login-form-header > h2 {
     display: inline-block;
 }
@@ -182,10 +185,11 @@ input[type=text], input[type=password] {
     content: '.';
     display: block;
 }
-#close-form {
+.close-login-form {
     float: right;
     width: 30px;
     height: 30px;
+    cursor: pointer;
     background: url('../img/times@2x.png') no-repeat;
 }
 .login-button-wrapper {
@@ -231,16 +235,16 @@ tbody > tr:nth-child(even) {
 }
 .tabrow li {
     position: relative;
-    z-index: 0;
     padding: 10px;
     width: 30%;
-    margin: 0 -5px;
+    margin: 0 -3px;
     border-top: 1px solid #aaa;
     font-size: 1.4em;
     background: #deebe1;
     display: inline-block;
     vertical-align: bottom;
     cursor: pointer;
+    z-index: 0;
 }
 .tabrow li:first-child {
     margin: 0;
@@ -248,22 +252,28 @@ tbody > tr:nth-child(even) {
 .tabrow li.active {
     background: #f5f5f5;
     color: #000;
-    z-index: 2;
+    border-right: 1px solid #aaa;
+    border-left: 1px solid #aaa;
     padding: 20px;
+    z-index: 0;
     top: 2px;
 }
-.tabrow:before {
-    z-index: 1;
+.tabrow li.active:first-child { 
+    border-left: none;
 }
 /* Style the tab content */
 .tabcontent {
     display: none;
-    padding: 6px 12px;
+    padding: 25px;
     border-top: 1px solid #ccc;   
-    background-color: #f5f5f5
+    background-color: #f5f5f5;
+    
 }
+
 .tabcontent a { text-decoration: none;}
 .tabcontent.active { display: block;}
+
+
 /**********************************************************
 **** RESPONSIVE STYLES ************************************
 ***********************************************************/
@@ -277,17 +287,33 @@ tbody > tr:nth-child(even) {
     header .nav-right li {
         line-height: 38px;
     }
-    
+    .hero-info p{
+        width: 65%;
+    }        
     .left-column {
         width: 66%;
     }
     .right-column {
         width:33%;
     }
+    .login-form {
+        width: 66%;
+        padding: 25px;
+        margin: 10% auto auto auto;
+        background-color: #fff;
+        box-shadow: 0 0 5px #000;
+    }
+    
 }
 
 @media only screen and (max-width: 1024px) {
-    .body-content, header { padding: 0; }
+    /*.phone-display {
+        margin-top: -200px;
+        background-image: url('../img/iphone.png');
+        width: 105px;
+        height: 180px;
+    }*/
+    .body-content, header { padding: 0 5px; }
     .left-column {
         float:none;
         display: block;
@@ -316,7 +342,7 @@ tbody > tr:nth-child(even) {
     #rate-table {
         overflow: auto;
     }
-    .hero-info > img {
+    .phone-display {
         display: none;        
     }
     #close-form {
@@ -326,13 +352,26 @@ tbody > tr:nth-child(even) {
         background: url('../img/times.png') no-repeat;
     }
     .login-form {
-        width: 99%;
-        padding: 5px;  
+        width: 90%;
+        padding: 20px;  
         margin: 15% auto auto auto;
+        
     }
     .login-form-header > h2 {
         font-size: 2em;
     }
+    .form-row > label {
+        font-weight: 800;
+        font-size: 1.4em;
+        display: block;
+    }
+    
+    .form-row > input {
+        display: block;
+        width: 95%;
+        margin-top: 10px;
+    }
+    
     .nav-right li {
         display: block;
         padding: 10px;

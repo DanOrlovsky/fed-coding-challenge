@@ -1,5 +1,4 @@
 /* 
-
 index.js
 02/03/18 - BASIC FUNCTIONALITY
 Dan Orlovsky
@@ -7,8 +6,14 @@ Ally Coding Challenge
 */
 
 var indexPage = {
+
+    // setEventListeners 
+    // description:
+    //      Creates event listeners for the page we are consuming
     setEventListeners: function() {
         $('.tablinks').on('click', this.changeTab);
+        $('.btn-login-form').on('click', function() { indexPage.promptLoginForm("block", 1) });
+        $('.close-login-form').on('click', function() { indexPage.promptLoginForm("hidden", 0) });
     },
     // callApi 
     // params: 
@@ -47,6 +52,9 @@ var indexPage = {
         element.append(tableRows);
     },
 
+    // changeTab 
+    // description:
+    //      Switches which tab is being displayed depending on which one was pressed.
     changeTab: function() {
         // Get the button that called the function
         var button = $(this);
@@ -75,13 +83,22 @@ var indexPage = {
             });
             indexPage.buildRateTable(data, $('tbody#rate-table-body'));
         })
+        // Setup event listeners
+        this.setEventListeners();
     },
+    // promptLogin 
+    // description:
+    //      Shows or hides the login modal screen
+    promptLoginForm: function(display, opatTo) {        
+        $("#login-form").css({ display: display }).animate({ opacity: opatTo,"z-index": (opatTo > 0 ? "100": "-999") });
+        
+    }
 };  
 // function() 
 // entrypoint 
 (function() {
     $(document).ready(function() { 
+        // Initialize our page 
         indexPage.initPage();
-        indexPage.setEventListeners();
     })
 })();
