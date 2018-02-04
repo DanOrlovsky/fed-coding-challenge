@@ -4,34 +4,68 @@ Daniel Orlovsky
 */
 
 /* Reset some default browser styles */
-html, body, div, header, footer, h1, h2, h3, h4, h5, h6,
-ul, li, ol, nav, p {
-    padding: 0; margin: 0;
-    vertical-align: baseline;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
 }
 
-/* SET DISPLAY FOR OLDER BROWSERS */
-header, section, footer, aside, nav, main, article, figure {
-    display: block; 
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 /* END DEFAULT STYLES RESET */
 
 
 body {
     width: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
 }
 
 
 /**********************************************************
 **** BASE CONTENT STYLES **********************************
 ***********************************************************/
+body, h1, h2, h3, h4, h5, h6, p, ul, li, div {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 .body-content {padding: 25px 15% 0; color: #666; }
 footer { padding: 25px 15%; background-color: #e7e8ea; }
 footer:after {
     clear: both;
-    content: '.';
+    content: "  ";
     display: block;
 }
 header {
@@ -89,6 +123,7 @@ header .nav-right a {
 /**********************************************************
 **** BODY STYLES ******************************************
 ***********************************************************/
+strong { font-weight: 800; }
 article > h1, article > h5 {
     color: #640360; 
 }
@@ -135,12 +170,12 @@ input[type=text], input[type=password] {
     font-size: 1.2em;
 }
 
-.headline > h2 {
+.headline  h2 {
     display: inline-block;
     padding: 0 20px;
 }
 
-.headline > h2:first-child {
+.headline h2:first-child {
     border-right: 1px solid #666; padding-left: 0;
 }
 .body-content:after {
@@ -179,15 +214,17 @@ input[type=text], input[type=password] {
     font-size: 1.4em;
     width: 25%;
 }
-
+.form-row {
+    margin-top: 10px;
+}
 .form-row > input {
     float: right;
-    width: 75%;
+    width: 74%;
 }
 .form-row:after {
     clear: both;
-    content: '.';
     display: block;
+    content: "  ";
 }
 .close-login-form {
     float: right;
@@ -389,11 +426,20 @@ tbody > tr:nth-child(even) {
         line-height: 16px;
         border-bottom: 1px solid #e7e8ea;
     }
-    .headline > h2 {
+    .headline h2 {
         display: inline-block;
         padding: 0 20px;
         font-size: 1.8em;
     }
        
+}
+@media only screen and (max-width: 320px) {
+    .headline h2 {
+        padding: 5px;
+    }
+    .login-form-header > h2 {
+        font-size: 1.65em;
+    }
+
 }
 
