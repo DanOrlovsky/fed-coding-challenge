@@ -65,7 +65,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, div {
 }
 
 .body-content {padding: 25px 15% 0; color: #666; }
-footer { padding: 25px 15%; background-color: #e7e8ea; }
+footer { padding: 25px 15% 40px 15%; background-color: #e7e8ea; }
 footer:after {
     clear: both;
     content: "  ";
@@ -353,7 +353,7 @@ tbody > tr:nth-child(even) {
 
 @media only screen and (max-width: 1024px) {
     .body-content, header { padding: 0 5px; }
-    footer { padding: 20px 5px;}
+    footer { padding: 20px 5px 40px 5px;}
     .left-column {
         float:none;
         display: block;
