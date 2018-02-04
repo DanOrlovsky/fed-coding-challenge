@@ -3,7 +3,10 @@ site.css
 Daniel Orlovsky
 */
 
-/* Reset some default browser styles */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -180,7 +183,7 @@ input[type=text], input[type=password] {
 }
 .body-content:after {
     clear: both;
-    content: '.';
+    content: "  ";
     display: block;
 }
 /**********************************************************
@@ -350,6 +353,7 @@ tbody > tr:nth-child(even) {
 
 @media only screen and (max-width: 1024px) {
     .body-content, header { padding: 0 5px; }
+    footer { padding: 20px 5px;}
     .left-column {
         float:none;
         display: block;
@@ -370,6 +374,17 @@ tbody > tr:nth-child(even) {
         padding: 0 15px;
     }
     
+}
+@media only screen and (max-width: 640px) {
+    .phone-display {
+        margin-top: -190px;
+        background-image: url('../img/iphone.png');
+        width: 102px;
+        height: 180px;
+    }
+    .hero-info > p{
+        width: 80%;
+    }    
 }
 @media only screen and (max-width: 420px) {
     .hero-info > p{

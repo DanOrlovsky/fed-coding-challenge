@@ -1,6 +1,7 @@
 /* 
 index.js
 02/03/18 - BASIC FUNCTIONALITY
+02/04/18 - ADDED setEventListeners to clean code
 Dan Orlovsky
 Ally Coding Challenge
 */
@@ -15,6 +16,7 @@ var indexPage = {
         $('.btn-login-form').on('click', function() { indexPage.promptLoginForm("block", 1) });
         $('.close-login-form').on('click', function() { indexPage.promptLoginForm("hidden", 0) });
     },
+
     // callApi 
     // params: 
     //      uri - target uri
@@ -36,6 +38,7 @@ var indexPage = {
             }
         })
     },
+
     // buildRateTable 
     // params: 
     //      data - data to populate table with
